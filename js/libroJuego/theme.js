@@ -2,7 +2,6 @@ import { configurations } from "./config.js";
 
 /**
  * Applies the theme configuration by updating text elements, button styles, and image sources.
- * @param {string} theme - The name of the theme to apply (e.g., 'cap1', 'dark', etc.).
  */
 export const applyThemeConfig = (theme) => {
   const config = getThemeConfig(theme);
@@ -34,17 +33,12 @@ export const applyThemeConfig = (theme) => {
 
 /**
  * Retrieves the configuration object for a given theme.
- * @param {string} theme - The name of the theme to retrieve the configuration for.
- * @returns {Object} The configuration object for the theme.
  */
 const getThemeConfig = (theme) => configurations[theme] || configurations.cap1;
 
 /**
  * Updates the text content of a specified HTML element.
  * If the element is the "question" and the theme config hides the question, it will be hidden.
- * @param {string} id - The ID of the element to update.
- * @param {string} text - The text content to set for the element.
- * @param {string} theme - The current theme, used to determine visibility of specific elements like "question".
  */
 const updateElementText = (id, text, theme) => {
   const element = document.getElementById(id);
@@ -58,12 +52,6 @@ const updateElementText = (id, text, theme) => {
 
 /**
  * Configures a button with specific styles, text, visibility, and behavior.
- * @param {string} selector - The CSS selector for the button element.
- * @param {string} text - The text to display on the button.
- * @param {string} primaryColor - The color of the button text.
- * @param {string} secondaryColor - The background color of the button.
- * @param {string} link - The URL to navigate to when the button is clicked.
- * @param {boolean} [isVisible=true] - Whether the button should be visible (default is true).
  */
 const configureButton = (
   selector,
@@ -91,8 +79,6 @@ const configureButton = (
 
 /**
  * Updates the source URL of an image element.
- * @param {string} selector - The CSS selector for the image element.
- * @param {string} src - The new source URL for the image.
  */
 const updateImageSrc = (selector, src) => {
   const image = document.querySelector(selector);

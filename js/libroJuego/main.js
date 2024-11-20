@@ -11,12 +11,14 @@ const loadThemeFromParams = () => {
   applyThemeConfig(theme);
 };
 
-// Wait for the DOM to be fully loaded before executing loadThemeFromParams.
-document.addEventListener("DOMContentLoaded", loadThemeFromParams);
 
-/**
- * Listens for a click event on the "backButton" element and navigates the browser history back to the previous page.
- */
-document.getElementById("backButton").addEventListener("click", function () {
-  window.history.back();
+document.addEventListener("DOMContentLoaded", () => {
+  loadThemeFromParams();
+
+  const backButton = document.getElementById("backButton");
+  if (backButton) {
+    backButton.addEventListener("click", () => {
+      window.history.back();
+    });
+  }
 });

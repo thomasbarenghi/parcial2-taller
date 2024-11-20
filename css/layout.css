@@ -119,6 +119,15 @@ input {
   border-color: rgba(13, 20, 11, 0.3);
 }
 
+/* Table Styles */
+tbody tr {
+  border-bottom: 1px solid #ddd; /* Light gray border between rows */
+}
+
+th {
+  border-bottom: 2px solid #ddd; /* Slightly thicker border for headers */
+}
+
 /* Player Styles */
 .player-list {
   width: 100%;
@@ -150,4 +159,25 @@ input {
   font-size: 24px;
   line-height: 120%;
   font-weight: 900;
+}
+
+/* Admin Table Styles */
+.id-column {
+  min-width: 80px;
+}
+
+.title-column {
+  min-width: 200px;
+}
+
+.paragraph-column {
+  min-width: 200px;
+}
+
+.question-column {
+  min-width: 150px;
+}
+
+.actions-column {
+  min-width: 150px;
 }

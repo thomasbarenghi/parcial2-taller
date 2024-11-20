@@ -1,15 +1,15 @@
 import { configurations } from "./config.js";
 
 /**
- * Applies the theme configuration by updating text elements, button styles, and image sources.
+ * Applies the chapter configuration by updating text elements, button styles, and image sources.
  */
-export const applyThemeConfig = (theme) => {
-  const config = getThemeConfig(theme);
+export const applyChapterConfig = (chapter) => {
+  const config = getChapterConfig(chapter);
 
-  updateElementText("title", config.title, theme);
-  updateElementText("story", config.paragraph, theme);
-  updateElementText("question", config.question, theme);
-  updateElementText("caption", config.caption, theme);
+  updateElementText("title", config.title, chapter);
+  updateElementText("story", config.paragraph, chapter);
+  updateElementText("question", config.question, chapter);
+  updateElementText("caption", config.caption, chapter);
 
   configureButton(
     "#button1",
@@ -32,19 +32,19 @@ export const applyThemeConfig = (theme) => {
 };
 
 /**
- * Retrieves the configuration object for a given theme.
+ * Retrieves the configuration object for a given chapter.
  */
-const getThemeConfig = (theme) => configurations[theme] || configurations.cap1;
+const getChapterConfig = (chapter) => configurations[chapter] || configurations.cap1;
 
 /**
  * Updates the text content of a specified HTML element.
- * If the element is the "question" and the theme config hides the question, it will be hidden.
+ * If the element is the "question" and the chapter config hides the question, it will be hidden.
  */
-const updateElementText = (id, text, theme) => {
+const updateElementText = (id, text, chapter) => {
   const element = document.getElementById(id);
   if (element) {
     element.textContent = text;
-    if (id === "question" && !configurations[theme].showQuestion) {
+    if (id === "question" && !configurations[chapter].showQuestion) {
       element.style.display = "none";
     }
   }

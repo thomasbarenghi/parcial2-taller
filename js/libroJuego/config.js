@@ -11,8 +11,8 @@ export const configurations = {
     buttonMainColor: "#034801",
     buttonSecondaryColor: "#EEF700",
     links: {
-      button1Link: "librojuego.html?theme=cap2a",
-      button2Link: "librojuego.html?theme=cap2b",
+      button1Link: "librojuego.html?chapter=cap2a",
+      button2Link: "librojuego.html?chapter=cap2b",
     },
     backgroundImage: "./multimedia/historia/capitulo1-bg.webp",
     vectorImage: "./multimedia/historia/capitulo1-vector.svg",
@@ -30,8 +30,8 @@ export const configurations = {
     buttonMainColor: "#DD4F06",
     buttonSecondaryColor: "#FAE512",
     links: {
-      button1Link: "librojuego.html?theme=cap2aa",
-      button2Link: "librojuego.html?theme=cap2ab",
+      button1Link: "librojuego.html?chapter=cap2aa",
+      button2Link: "librojuego.html?chapter=cap2ab",
     },
     backgroundImage: "./multimedia/historia/capitulo2a-bg.webp",
     vectorImage: "./multimedia/historia/capitulo2a-vector.svg",
@@ -49,8 +49,8 @@ export const configurations = {
     buttonMainColor: "#361360",
     buttonSecondaryColor: "#EBCCF8",
     links: {
-      button1Link: "librojuego.html?theme=cap2ba",
-      button2Link: "librojuego.html?theme=cap2bb",
+      button1Link: "librojuego.html?chapter=cap2ba",
+      button2Link: "librojuego.html?chapter=cap2bb",
     },
     backgroundImage: "./multimedia/historia/capitulo2b-bg.webp",
     vectorImage: "./multimedia/historia/capitulo2b-vector.svg",

@@ -1,19 +1,19 @@
-import { applyThemeConfig } from "./theme.js";
+import { applyChapterConfig } from "./theme.js";
 
 /**
- * Loads the theme from the URL query parameters and applies it using the applyThemeConfig function.
- * If no theme is specified in the URL, it defaults to "cap1".
+ * Loads the chapter from the URL query parameters and applies it using the applyChapterConfig function.
+ * If no chapter is specified in the URL, it defaults to "cap1".
  * This function is executed when the DOM is fully loaded.
  */
-const loadThemeFromParams = () => {
-  const theme =
-    new URLSearchParams(window.location.search).get("theme") || "cap1";
-  applyThemeConfig(theme);
+const loadChapterFromParams = () => {
+  const chapter =
+    new URLSearchParams(window.location.search).get("chapter") || "cap1";
+  applyChapterConfig(chapter);
 };
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  loadThemeFromParams();
+  loadChapterFromParams();
 
   const backButton = document.getElementById("backButton");
   if (backButton) {

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <title>La Aventura Del Bosque Intergaláctico - Inicio</title>
+  <meta name="description"
+    content="La Aventura Del Bosque Intergaláctico es un juego interactivo que lleva a los jugadores a través de un bosque lleno de misterios y desafíos.">
+  <!-- Preload the Outfit font to improve performance -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" as="style" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <!-- Preload the main game script to speed up loading -->
+  <script rel="modulepreload" type="module" src="./js/home.js" defer></script>
+  <!-- Bootstrap Bundle (JS) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"
+    defer></script>
+  <!-- Global styles -->
+  <link href="./css/reset.css" rel="stylesheet" />
+  <link href="./css/global.css" rel="stylesheet" />
+  <link href="./css/layout.css" rel="stylesheet" />
+</head>
+
+<body>
+  <header>
+    <div class="flex flex-col justify-content-between container-custom align-content-center full-size d-flex">
+      <a href="index.html">
+        <img src="./multimedia/iconos/logo.svg" alt="Logo de La Aventura Del Bosque Intergaláctico"
+          class="d-none d-lg-block" />
+        <img src="./multimedia/iconos/logo-mini.svg" alt="Logo de La Aventura Del Bosque Intergaláctico"
+          class="d-block d-lg-none" />
+      </a>
+      <div class="d-flex justify-content-center align-items-center gap-5">
+        <nav class="d-none d-xl-block">
+          <ul>
+            <li>
+              <a href="index.html">
+                <img src="./multimedia/iconos/inicio-text.svg" alt="Inicio" />
+              </a>
+            </li>
+            <li>
+              <a href="index.html#puntajes">
+                <img src="./multimedia/iconos/puntajes-text.svg" alt="Historial de puntajes" />
+              </a>
+            </li>
+            <li>
+              <a href="librojuego.html">
+                <img src="./multimedia/iconos/jugar-text.svg" alt="Nueva partida" />
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <a class="btn" href="login.html">Ingresar</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <!-- Hero -->
+    <section class="box-center min-vh-100 align-items-center position-relative">
+      <!-- BG + Overlay -->
+      <div class="image-container position-absolute full-size top-0 end-0 z-n1">
+        <img src="./multimedia/home-hero-bg.webp" class="image-cover" alt="Un bosque con arboles" />
+        <div class="overlay-50"></div>
+      </div>
+      <!-- Content -->
+      <div
+        class="content-container justify-content-between full-size d-flex flex-column-reverse py-3 py-xl-0 flex-xl-row gap-5">
+        <!-- Texts -->
+        <div class="w-100" style="max-width: 693px">
+          <span class="fw-bold text-white">Una aventura en familia</span>
+          <img src="./multimedia/vectores-generales/welcome-home.svg"
+            alt="Bienvenido a la aventura del bosque intergaláctico!" class="w-100 d-none d-md-block" />
+          <img src="./multimedia/vectores-generales/welcome-home-small.svg"
+            alt="Bienvenido a la aventura del bosque intergaláctico!" class="w-100 d-block d-md-none" />
+          <div class="d-flex align-items-start flex-wrap gap-2 mt-4">
+            <a href="librojuego.html" class="btn">Empezar A Jugar</a>
+            <a href="index.html#info" class="btn-alternative">Conocer Mas</a>
+          </div>
+        </div>
+        <!-- Vector -->
+        <figure class="d-flex justify-content-center justify-content-xl-end" style="max-width: 75%">
+          <img src="./multimedia/vectores-generales/hero-vector.svg"
+            alt="Bienvenido a la aventura del bosque intergaláctico!" class="image-cover ratio-1x1" />
+        </figure>
+      </div>
+    </section>
+    <!-- Info -->
+    <section class="box-center" id="info">
+      <!-- Content -->
+      <div class="container-xl full-size d-flex gap-2">
+        <div class="d-flex align-items-center flex-column">
+          <span class="epi">Jugá y divertite con nosotros</span>
+          <h2 class="text-center">Sobre esta aventura Intergalactica</h2>
+          <p class="text-center mt-2">
+            Bienvenido al bosque intergaláctico, donde Bryan, un venado
+            intrépido con habilidades únicas, enfrenta desafíos épicos para
+            salvar su hogar y a sus amigos. Acompañalo mientras toma
+            decisiones cruciales que determinarán su destino.
+            <span class="fw-bold">¿Serás capaz de guiar a Bryan hacia un final glorioso, o lo
+              llevarás a un desenlace inesperado?</span>
+          </p>
+          <a href="librojuego.html" class="btn mt-3">Empezar A Jugar</a>
+        </div>
+      </div>
+    </section>
+    <!-- Players -->
+    <section class="box-center" id="puntajes">
+      <!-- BG + Overlay -->
+      <div class="image-container position-absolute full-size top-0 end-0 z-n1">
+        <img src="./multimedia/home-puntos-bg.webp" class="image-cover" alt="Un bosque con arboles" />
+        <div class="overlay-50"></div>
+      </div>
+      <!-- Content -->
+      <div
+        class="content-container flex-xl-row flex-column align-items-center align-items-xl-start full-size d-flex gap-5 text-white">
+        <!-- Textos -->
+        <div class="d-flex align-items-start flex-column text-center text-xl-start">
+          <span class="epi text-white w-100">Capos de los capos</span>
+          <h2 class="w-100">Nuestros mejores jugadores 😎</h2>
+          <p class="mt-2">
+            Su destreza, estrategia y decisiones las llevaron a nuevas alturas
+            en el Bosque Estelar. Ellos son los verdaderos campeones del
+            universo, ¡y su legado vivirá para siempre en la memoria de todos
+            los aventureros!
+          </p>
+        </div>
+        <!-- Mejores Jugadores -->
+        <div class="player-list">
+          <!-- Players will be rendered here -->
+        </div>
+      </div>
+    </section>
+    <footer class="box-center">
+      <div class="content-container">
+        <p class="text-white">
+          © 2024 La Aventura Del Bosque Intergalatico. Todos los derechos
+          reservados.
+          <br />
+          <span class="fw-bold">
+            Creado por Thomas Barenghi (DNI 44792707)</span>
+        </p>
+      </div>
+    </footer>
+  </main>
+</body>
+
+</html>

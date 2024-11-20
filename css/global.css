@@ -1,0 +1,126 @@
+/* Base Styles */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: "Outfit", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 155%;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  line-height: 120%;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+h1,
+h2 {
+  font-size: 2.375rem; /* 38px -> 2.375rem */
+}
+
+h3 {
+  font-size: 1.75rem; /* 28px -> 1.75rem */
+}
+
+p,
+span {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 1.1em;
+  line-height: 200%;
+  font-weight: 300;
+}
+
+/* Navigation */
+nav ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* General Image Style */
+.image-cover {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.full-size {
+  width: 100%;
+  height: 100%;
+}
+
+.image-container img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Utility Styles */
+.box-center {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.overlay-50 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.overlay-40 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.epi {
+  font-size: 16px;
+  font-weight: 800;
+  color: #0800e2;
+}
+
+.container-custom {
+  max-width: 1536px;
+}
+
+.content-container {
+  display: flex;
+  align-items: center;
+  width: 100% !important;
+  z-index: 1;
+  max-width: 1536px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}

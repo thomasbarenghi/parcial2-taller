@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <title>La Aventura Del Bosque Intergaláctico - Registrar Puntaje</title>
+    <meta name="description"
+        content="La Aventura Del Bosque Intergaláctico es un juego interactivo que lleva a los jugadores a través de un bosque lleno de misterios y desafíos.">
+    <!-- Preload the Outfit font to improve performance -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" as="style" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <!-- Bootstrap Bundle (JS) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"
+        defer></script>
+    <!-- Global styles -->
+    <link href="./css/reset.css" rel="stylesheet" />
+    <link href="./css/global.css" rel="stylesheet" />
+    <link href="./css/layout.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <div class="flex-col justify-content-between container-custom align-content-center full-size d-flex">
+            <a href="index.html">
+                <img src="./multimedia/iconos/logo.svg" alt="Logo de La Aventura Del Bosque Intergaláctico"
+                    class="d-none d-lg-block" />
+                <img src="./multimedia/iconos/logo-mini.svg" alt="Logo de La Aventura Del Bosque Intergaláctico"
+                    class="d-block d-lg-none" />
+            </a>
+            <div class="d-flex justify-content-center align-items-center gap-5">
+                <nav class="d-none d-xl-block">
+                    <ul>
+                        <li>
+                            <a href="index.html">
+                                <img src="./multimedia/iconos/inicio-text.svg" alt="Inicio" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html#puntajes">
+                                <img src="./multimedia/iconos/puntajes-text.svg" alt="Historial de puntajes" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="librojuego.html">
+                                <img src="./multimedia/iconos/jugar-text.svg" alt="Nueva partida" />
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <a class="btn" href="login.html">Ingresar</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- Hero -->
+        <section class="box-center min-vh-100 align-items-center position-relative" id="base-section">
+            <!-- BG + Overlay -->
+            <div class="image-container position-absolute full-size top-0 end-0 z-n1">
+                <img id="background" src="./multimedia/puntaje-bg.webp" class="image-cover" alt="Imagen de fondo" />
+                <div class="overlay-50"></div>
+            </div>
+            <!-- Content -->
+            <div class="d-flex full-size justify-content-center align-items-center">
+                <div class="bg-white rounded-5 p-5">
+                    <h2 class="h2 fw-normal">Registrar <strong class="fw-bold">Puntaje</strong>😎</h2>
+                    <form id="login-form" class="d-flex align-items-end mt-4 flex-column gap-4">
+                        <div class="d-flex flex-column w-100 gap-4">
+                            <label for="fullname">
+                                Nombre Completo
+                                <input type="text" name="fullname" required>
+                            </label>
+                            <label for="email">
+                                Correo Electronico
+                                <input type="text" name="email" required>
+                            </label>
+                            <label for="country">
+                                Pais
+                                <input type="text" name="country" required>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn mt-1">Registrar</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <footer class="box-center">
+            <div class="content-container">
+                <p class="text-white">
+                    © 2024 La Aventura Del Bosque Intergalatico. Todos los derechos
+                    reservados.
+                    <br />
+                    <span class="fw-bold">
+                        Creado por Thomas Barenghi (DNI 44792707)</span>
+                </p>
+            </div>
+        </footer>
+    </main>
+</body>
+
+</html>

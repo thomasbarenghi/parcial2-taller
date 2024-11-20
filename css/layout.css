@@ -1,0 +1,153 @@
+/* Button */
+.btn {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #0800e2;
+  color: #ffffff;
+  font-weight: 900;
+  text-decoration: none;
+  border-radius: 9999px;
+  border: #ffffff;
+  border-width: 4px;
+  border-style: solid;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #ffffff;
+  color: #0800e2;
+  border-color: #0800e2;
+}
+
+.btn-alternative {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #ffffff;
+  color: #0800e2;
+  font-weight: 900;
+  text-decoration: none;
+  border-radius: 9999px;
+  border: #0800e2;
+  border-width: 4px;
+  border-style: solid;
+  transition: all 0.3s ease;
+}
+
+.btn-alternative:hover {
+  background-color: #0800e2;
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+/* Footer Styles */
+footer {
+  background: #0800e2;
+  padding: 120px 30px;
+}
+
+@media (min-width: 1200px) {
+  footer {
+    padding: 120px 80px;
+  }
+}
+
+/* Pantallas medianas */
+@media (min-width: 768px) and (max-width: 1199px) {
+  footer {
+    padding: 120px 60px;
+  }
+}
+
+/* Header Styles */
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  top: 0;
+  background: transparent;
+  width: 100%;
+  padding: 30px 30px;
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 1200px) {
+  header {
+    padding: 30px 80px;
+  }
+}
+
+/* Pantallas medianas */
+@media (min-width: 768px) and (max-width: 1199px) {
+  header {
+    padding: 30px 60px;
+  }
+}
+
+/* Section Styles */
+section {
+  background: transparent;
+  width: 100%;
+  padding: 120px 30px;
+}
+
+@media (min-width: 1200px) {
+  section {
+    padding: 120px 80px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  section {
+    padding: 120px 60px;
+  }
+}
+
+/* Forms Styles */
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+input {
+  padding: 10px 20px;
+  border-radius: 20px;
+  border-color: rgba(13, 20, 11, 0.3);
+}
+
+/* Player Styles */
+.player-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.player-avatar {
+  object-fit: contain;
+  aspect-ratio: 1/1;
+  width: 80px;
+  height: 80px;
+}
+
+.player-nickname {
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 120%;
+}
+
+.player-id {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.player-points {
+  font-size: 24px;
+  line-height: 120%;
+  font-weight: 900;
+}

@@ -1,18 +1,14 @@
 import { configurations } from "./libroJuego/config.js";
 
-const getUserFromURL = () => {
-    const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get("user");
-};
+const getQueryParamFromURL = (param) =>
+  new URLSearchParams(window.location.search).get(param);
 
-// Cambiar el contenido del h1 con id 'welcome-text'
 const updateWelcomeText = () => {
-    const user = getUserFromURL(); // Obtener el nombre del usuario de la URL
-    const welcomeText = document.getElementById("welcome-text");
-
-    if (welcomeText && user) {
-        welcomeText.textContent = `Bienvenido/a ${user}`; // Cambiar el texto del h1
-    }
+  const user = getQueryParamFromURL("user");
+  const welcomeText = document.getElementById("welcome-text");
+  if (welcomeText && user) {
+    welcomeText.textContent = `Bienvenido/a ${user}`;
+  }
 };
 
 const createTableRowHTML = (id, chapter) => `
@@ -30,35 +26,32 @@ const createTableRowHTML = (id, chapter) => `
 `;
 
 const deleteChapter = (id) => {
-    const confirmation = confirm(
-        `¿Estás seguro de que deseas eliminar el capítulo ${id}?`
-    );
-    if (confirmation) {
-        alert(`Capítulo ${id} eliminado.`);
-        // Aquí podrías agregar el código para realizar la eliminación real si es necesario
-    } else {
-        alert("Operación cancelada.");
-    }
+  const confirmation = confirm(
+    `¿Estás seguro de que deseas eliminar el capítulo ${id}?`
+  );
+  alert(confirmation ? `Capítulo ${id} eliminado.` : "Operación cancelada.");
 };
 
 const renderTableData = () => {
-    const tbody = document.getElementById("tbody");
-    const rows = Object.entries(configurations).map(([id, chapter]) =>
-        createTableRowHTML(id, chapter)
-    );
-    tbody.innerHTML = rows.join("");
+  const tbody = document.getElementById("tbody");
+  const rows = Object.entries(configurations).map(([id, chapter]) =>
+    createTableRowHTML(id, chapter)
+  );
+  tbody.innerHTML = rows.join("");
 };
 
-document.addEventListener("DOMContentLoaded", () => {
-    renderTableData();
-    updateWelcomeText();
+const handleDeleteChapterClick = (event) => {
+  if (event.target && event.target.classList.contains("delete-chapter")) {
+    event.preventDefault();
+    const chapterId = event.target.getAttribute("data-id");
+    deleteChapter(chapterId);
+  }
+};
 
-    // Delegación de eventos para los enlaces de eliminación
-    document.body.addEventListener("click", (event) => {
-        if (event.target && event.target.classList.contains("delete-chapter")) {
-            event.preventDefault(); // Evitar la acción predeterminada del enlace
-            const chapterId = event.target.getAttribute("data-id");
-            deleteChapter(chapterId);
-        }
-    });
-});
+const onDocumentReady = () => {
+  renderTableData();
+  updateWelcomeText();
+  document.body.addEventListener("click", handleDeleteChapterClick);
+};
+
+document.addEventListener("DOMContentLoaded", onDocumentReady);

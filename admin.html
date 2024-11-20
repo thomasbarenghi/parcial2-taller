@@ -23,6 +23,8 @@
     <link href="./css/reset.css" rel="stylesheet" />
     <link href="./css/global.css" rel="stylesheet" />
     <link href="./css/layout.css" rel="stylesheet" />
+    <!-- First Content Preload -->
+    <link rel="preload" href="./multimedia/puntaje-bg.webp" as="image" type="image/webp" />
 </head>
 
 <body>
@@ -60,11 +62,11 @@
         <section class="box-center min-vh-100 align-items-center position-relative" id="base-section">
             <!-- BG + Overlay -->
             <div class="image-container position-absolute full-size top-0 end-0 z-n1">
-                <img id="background" src="./multimedia/login-bg.webp" class="image-cover" alt="Imagen de fondo" />
+                <img id="background" src="./multimedia/puntaje-bg.webp" class="image-cover" alt="Imagen de fondo" />
                 <div class="overlay-50"></div>
             </div>
             <!-- Content -->
-            <div class="d-flex full-size flex-column justify-content-sm-start gap-4 py-4">
+            <div class="d-flex container-custom full-size flex-column justify-content-sm-start gap-4 py-4">
                 <div class="d-flex justify-content-between align-items-center flex-wrap">
                     <h1 id="welcome-text" class="text-white"></h1>
                     <a class="btn" href="modificar-capitulo.html?action=create">Crear Capitulo</a>

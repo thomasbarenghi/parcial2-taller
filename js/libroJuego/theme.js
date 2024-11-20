@@ -1,8 +1,5 @@
 import { configurations } from "./config.js";
 
-/**
- * Applies the chapter configuration by updating text elements, button styles, and image sources.
- */
 export const applyChapterConfig = (chapter) => {
   const config = getChapterConfig(chapter);
 
@@ -31,15 +28,9 @@ export const applyChapterConfig = (chapter) => {
   updateImageSrc("#vector-image", config.vectorImage);
 };
 
-/**
- * Retrieves the configuration object for a given chapter.
- */
-const getChapterConfig = (chapter) => configurations[chapter] || configurations.cap1;
+const getChapterConfig = (chapter) =>
+  configurations[chapter] || configurations.cap1;
 
-/**
- * Updates the text content of a specified HTML element.
- * If the element is the "question" and the chapter config hides the question, it will be hidden.
- */
 const updateElementText = (id, text, chapter) => {
   const element = document.getElementById(id);
   if (element) {
@@ -50,9 +41,6 @@ const updateElementText = (id, text, chapter) => {
   }
 };
 
-/**
- * Configures a button with specific styles, text, visibility, and behavior.
- */
 const configureButton = (
   selector,
   text,
@@ -77,9 +65,6 @@ const configureButton = (
   }
 };
 
-/**
- * Updates the source URL of an image element.
- */
 const updateImageSrc = (selector, src) => {
   const image = document.querySelector(selector);
   if (image) {

@@ -1,1 +1,0 @@
-Este proyecto requiere ser ejecutado en "Live Server (VS Code)" o similares para que funcione correctamente.  

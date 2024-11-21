@@ -17,7 +17,7 @@ const createTableRowHTML = (id, chapter) => `
         <td class="title-column">${chapter.title}</td>
         <td class="paragraph-column">${chapter.paragraph}</td>
         <td class="question-column">${chapter.question || "No hay"}</td>
-        <td class="actions-column d-flex gap-3">
+        <td class="actions-column d-flex">
             <a class="btn-text" href="librojuego.html?chapter=${id}">Ver</a>
             <a class="btn-text" href="modificar-capitulo.html?action=edit&chapter=${id}">Editar</a>
             <a class="btn-text delete-chapter" href="#" data-id="${id}">Eliminar</a>
